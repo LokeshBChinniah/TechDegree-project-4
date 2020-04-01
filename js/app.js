@@ -6,13 +6,10 @@
 
  document.getElementById(btn_reset).addEventListener('click', function() {
      game.startGame();
-
-    this.style.display = 'none';
-
  })
 
  document.getElementsByClassName('key').addEventListener('click', function() {
      game.handleInteraction();
 
-     
+
  })
