@@ -20,9 +20,9 @@ class Game {
      */
     createPhrase() {
         let phrases = [
-            new Phrase('John Wick'),
-            new Phrase('Hunger Games'),
-            new Phrase('Groundhog Day'),
+            new Phrase('Interstellar'),
+            new Phrase('Avengers'),
+            new Phrase('Alien'),
             new Phrase('ThunderStruck'),
             new Phrase('Martian')
         ];
