@@ -15,8 +15,8 @@ class Game {
         this.activePhrase = null;
     }
 
-    /**Create phrases for use in game
-     * @return {array} an array of phrases to use for game
+    /**
+     * Create phrases for use in game
      */
     createPhrase() {
         let phrases = [
@@ -43,7 +43,6 @@ class Game {
 
     /**
      * Selects random phrase from phrases property
-     * @return {Object} Phrase object chosen to be used
      */
     getRandomPhrase() {
         let randomNumber = Math.floor(Math.random() * this.phrases.length);

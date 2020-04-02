@@ -2,14 +2,24 @@
  * Project 4 - OOP Game App
  * app.js */
 
- const game = new Game();
+let game;
+const resetButton = document.querySelector('#btn__reset');
+const keyboard = document.querySelectorAll('.key');
 
- document.getElementById(btn_reset).addEventListener('click', function() {
-     game.startGame();
- })
+//Creates event listener for "start game" button upon loading the page
+resetButton.addEventListener('click', () =>{
 
- document.getElementsByClassName('key').addEventListener('click', function() {
-     game.handleInteraction();
+    game = new Game();
 
+    game.startGame();
 
- })
+})
+
+//Adds event listener to every keyboard button on screen
+keyboard.forEach( key => {
+
+    key.addEventListener('click', (e) => {
+        game.handleInteraction(e.target);
+    });
+
+})
