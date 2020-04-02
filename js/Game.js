@@ -74,7 +74,7 @@ class Game {
 
     }
 
-    //
+    //Removes a life if a wrong word is selected
     removeLife(){
 
         this.missed += 1;
@@ -88,7 +88,22 @@ class Game {
 
     }
 
+    //Checks if the letters match and the player has won
+    checkForWin(){
 
+        const matchedLetters = document.querySelectorAll('.show');
+        const matched = matchedLetters.length;
+        const givenPhrase = this.activePhrase.phrase.length;
+
+        if( matched === givenPhrase ){
+            return true;
+        } else {
+            return false;
+        }
+    
+    }
+
+    //Ends the game if the player has won or if they run out of lives
     gameOver(gameWon){
 
         const overlay = document.querySelector('#overlay');
