@@ -21,5 +21,5 @@ keyboard.forEach( key => {
     key.addEventListener('click', (e) => {
         game.handleInteraction(e.target);
     });
-
+   
 })

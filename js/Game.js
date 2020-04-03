@@ -64,11 +64,12 @@ class Game {
         } else {
             button.className = 'chosen';
             this.activePhrase.showMatchedLetter( button.textContent );
-            this.checkForWin();
+            
         }
 
         if( this.checkForWin() === true ){
             this.gameOver(true);
+            this.checkForWin();
         }
 
     }
